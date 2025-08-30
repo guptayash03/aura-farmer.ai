@@ -87,6 +87,7 @@ const CreatePost = () => {
             )}
           </form>
         </div>
+
         <div className="flex flex-[0.4] w-full justify-center items-center">
           <TiltedCard
             imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
@@ -101,7 +102,6 @@ const CreatePost = () => {
             showMobileWarning={false}
             showTooltip={true}
             displayOverlayContent={true}
-            
           />
         </div>
       </div>

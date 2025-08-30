@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { Logo } from '@/components/Logo';
+import { Logo } from "@/components/Logo";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaLinkedin,FaInstagram,FaReddit,FaTwitter }  from "react-icons/fa"; 
+import { FaLinkedin, FaInstagram, FaReddit, FaFacebook } from "react-icons/fa";
 import { SiX } from "react-icons/si";
 
 const Navbar = () => {
@@ -34,19 +34,16 @@ const Navbar = () => {
             />
           </span>
         </div>
-        <div className="font-Grotesk hidden md:flex  md:flex-row gap-5 text-slate-400 font-semibold text-lg">
-         
-        </div>
+        <div className="font-Grotesk hidden md:flex  md:flex-row gap-5 text-slate-400 font-semibold text-lg"></div>
         <AnimatePresence>
           {open && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
-            //  exit={{ opacity: 0, height: 0 }}
+              //  exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
               className="font-Grotesk md:hidden flex flex-col gap-5 text-slate-400 font-semibold text-lg"
             >
-              
               <div>Hello</div>
               <div>Hello</div>
               <div>Hello</div>
@@ -57,20 +54,34 @@ const Navbar = () => {
         </AnimatePresence>
         <div className="flex flex-row gap-4 pl-14 ml-40">
           <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white bg-gradient-to-b from-blue-400 to-blue-600 transition-all duration-300 ease-in-out font-semibold">
-            <span className="relative z-10 font-Grotesk"><FaLinkedin className="w-5 h-5"/></span>
+            <span className="relative z-10 font-Grotesk">
+              <FaLinkedin className="w-5 h-5" />
+            </span>
             <span className="absolute inset-0 bg-blue-900 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
           </button>
           <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white bg-gradient-to-b from-pink-600 via-red-600 to-yellow-600 transition-all duration-300 ease-in-out font-semibold">
-            <span className="relative z-10 font-Grotesk"><FaInstagram  className="w-5 h-5"/></span>
+            <span className="relative z-10 font-Grotesk">
+              <FaInstagram className="w-5 h-5" />
+            </span>
             <span className="absolute inset-0 bg-red-700 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
           </button>
           <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white bg-gradient-to-b from-red-500 to-red-700 transition-all duration-300 ease-in-out font-semibold">
-            <span className="relative z-10 font-Grotesk"><FaReddit  className="w-5 h-5"/></span>
-            <span className="absolute inset-0 bg-red-900 translate-y-full transition-transform duration-300 ease-in-out rounded-3xl  group-hover:translate-y-0"></span>
+            <span className="relative z-10 font-Grotesk">
+              <FaReddit className="w-5 h-5" />
+            </span>
+            <span className="absolute inset-0 bg-red-900 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
           </button>
           <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white transition-all bg-black duration-300 ease-in-out font-semibold">
-            <span className="relative z-10 font-Grotesk"><SiX  className="w-5 h-5"/></span>
+            <span className="relative z-10 font-Grotesk">
+              <SiX className="w-5 h-5" />
+            </span>
             <span className="absolute inset-0 bg-slate-700 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
+          </button>
+          <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white transition-all bg-gradient-to-b from-blue-400 to-blue-600 duration-300 ease-in-out font-semibold">
+            <span className="relative z-10 font-Grotesk">
+              <FaFacebook className="w-5 h-5" />
+            </span>
+            <span className="absolute inset-0 bg-blue-900 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
           </button>
         </div>
       </div>
