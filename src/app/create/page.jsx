@@ -1,7 +1,3 @@
-import Header from "@/components/Header";
-import PostDetails from "@/components/PostDetails";
-import PostPreview from "@/components/PostPreview";
-import Footer from "@/components/Footer";
 import CreatePost from "@/components/CreatePost";
 import Squares from "@/backgrounds/Squares";
 

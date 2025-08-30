@@ -8,7 +8,7 @@ import vsCodeLogo from '../assets/images/vs-code-logo.png';
 import notionLogo from '../assets/images/notion-logo.png';
 import jiraLogo from '../assets/images/jira-logo.png';
 import gcpLogo from '../assets/images/gcp-logo.png';
-import { SectionBorder } from '@/components/SectionBorder';
+// import { SectionBorder } from '@/components/SectionBorder';
 import { SectionContent } from '@/components/SectionContent';
 import { Button } from '@/components/Button';
 import { Orbit } from '@/components/Orbit';
@@ -19,9 +19,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export const features = [
-  'Effortless integration',
-  'Intelligent automation',
-  'Robust security',
+  'Instagram',
+  'Linkedin',
+  'Facebook',
+  'Twitter',
+  'Reddit etc',
 ];
 
 export const logos = [
@@ -71,14 +73,14 @@ export const Features = () => {
   return (
     <section id="features">
       <div className="container">
-        <SectionBorder borderTop>
+        {/* <SectionBorder borderTop> */}
           <SectionContent className="md:px-20 lg:px-40">
             <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
               {/* left side */}
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-200 leading-tight">
+                {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-200 leading-tight">
                   Your AI-powered collaboration companion
-                </h2>
+                </h2> */}
                 <ul className="mt-12 flex flex-col gap-8">
                   {features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-4">
@@ -185,7 +187,7 @@ export const Features = () => {
               </div>
             </div>
           </SectionContent>
-        </SectionBorder>
+        {/* </SectionBorder> */}
       </div>
     </section>
   );
