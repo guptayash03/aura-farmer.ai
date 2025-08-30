@@ -1,10 +1,11 @@
 import CreatePost from "@/components/CreatePost";
-import Iridescence from '@/backgrounds/Iridescence';
+import Iridescence from "@/backgrounds/Iridescence";
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen text-white h-full">
       <Iridescence
+        className="absolute inset-0 z-0 w-full h-full"
         color={[1, 1, 1]}
         mouseReact={false}
         amplitude={0.1}

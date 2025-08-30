@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 import { useEffect, useRef } from "react";
 
@@ -92,7 +92,9 @@ export default function Iridescence({
             gl.canvas.width / gl.canvas.height
           ),
         },
-        uMouse: { value: new Float32Array([mousePos.current.x, mousePos.current.y]) },
+        uMouse: {
+          value: new Float32Array([mousePos.current.x, mousePos.current.y]),
+        },
         uAmplitude: { value: amplitude },
         uSpeed: { value: speed },
       },
@@ -133,11 +135,5 @@ export default function Iridescence({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color, speed, amplitude, mouseReact]);
 
-  return (
-    <div
-      ref={ctnDom}
-      className="w-full h-full"
-      {...rest}
-    />
-  );
+  return <div ref={ctnDom} className="w-full h-full" {...rest} />;
 }
