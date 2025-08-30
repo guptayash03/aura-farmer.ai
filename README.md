@@ -1,5 +1,5 @@
 
-# 🚀 Flowbee.ai : AI Co-Creator for Social Media
+# 🚀 Aurafarmer.ai : AI Co-Creator for Social Media
 *Agentic Automation of content creation & posting for Instagram, LinkedIn, Twitter (X), Reddit, and more.*
 
 ---
