@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import PostTitle from "./PostTitle";
 import PostImage from "./PostImage";
 import PostInstructions from "./PostInstructions";
-
+import TiltedCard from "./TiltedCard";
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
@@ -39,31 +39,35 @@ const CreatePost = () => {
   return (
     <div className="flex flex-col items-center min-h-screen text-white z-10 py-4">
       <div className="flex flex-col md:flex-row w-[90%] lg:w-[80%] h-[600px] lg:h-[600px] rounded-3xl bg-white/10 backdrop-blur-md shadow-2xl border border-white/20">
-        <div className="flex-[0.6] w-full flex ">
+        <div className="flex-[0.6] w-full flex border-r border-white/70">
           <form className="p-6 w-full" onSubmit={handleSubmit}>
             <PostTitle title={title} setTitle={setTitle} />
             <div className="my-2" />
             <div className="flex flex-col gap-2 font-sans">
-              <label htmlFor="instructions" className="font-semibold text-xl">Post instructions</label>
+              <label htmlFor="instructions" className="font-semibold text-xl">
+                Post instructions
+              </label>
               <textarea
                 name="instructions"
                 id="instructions"
                 placeholder="write specifications for your post (optional)."
                 className="bg-white outline-green-300 font-sans p-2 rounded-lg text-black"
                 value={instructions}
-                onChange={e => setInstructions(e.target.value)}
+                onChange={(e) => setInstructions(e.target.value)}
               />
             </div>
             <div className="my-2" />
             <div className="flex flex-col gap-2 font-sans">
-              <label htmlFor="image" className="font-semibold text-xl">Image</label>
+              <label htmlFor="image" className="font-semibold text-xl">
+                Image
+              </label>
               <input
                 type="file"
                 accept="image/*"
                 name="image"
                 id="image"
                 className="bg-white outline-green-300 font-sans p-2 rounded-lg text-black"
-                onChange={e => setImage(e.target.files[0])}
+                onChange={(e) => setImage(e.target.files[0])}
               />
             </div>
             <div className="flex w-full justify-center p-2 flex-row">
@@ -82,6 +86,23 @@ const CreatePost = () => {
               </div>
             )}
           </form>
+        </div>
+        <div className="flex flex-[0.4] w-full justify-center items-center">
+          <TiltedCard
+            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+            altText="Kendrick Lamar - GNX Album Cover"
+            captionText="Kendrick Lamar - GNX"
+            containerHeight="450px"
+            containerWidth="350px"
+            imageHeight="450px"
+            imageWidth="350px"
+            rotateAmplitude={10}
+            scaleOnHover={1.05}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            
+          />
         </div>
       </div>
     </div>

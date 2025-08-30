@@ -13,7 +13,7 @@ const Navbar = () => {
       <div
         className={`bg-white/10 backdrop-blur-md shadow-2xl border border-white/20 flex ${
           open && "flex-col"
-        } md:flex-row gap-10 items-center p-3 rounded-4xl md:rounded-full mt-5 `}
+        } md:flex-row gap-5 items-center p-3 rounded-4xl md:rounded-full mt-5 `}
       >
         <Logo />
         <div className="title font-extrabold flex flex-row items-center gap-7 font-rubik text-white pr-2 text-2xl">
@@ -55,7 +55,7 @@ const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="flex flex-row gap-4 pl-14 ml-10">
+        <div className="flex flex-row gap-4 pl-14 ml-40">
           <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white bg-gradient-to-b from-blue-400 to-blue-600 transition-all duration-300 ease-in-out font-semibold">
             <span className="relative z-10 font-Grotesk"><FaLinkedin className="w-5 h-5"/></span>
             <span className="absolute inset-0 bg-blue-900 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
