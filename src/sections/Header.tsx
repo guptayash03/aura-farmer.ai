@@ -29,8 +29,8 @@ export const loginItems: {
   href: string;
 }[] = [
   {
-    buttonVariant: 'tertiary',
-    name: 'Create',
+    buttonVariant: 'primary',
+    name: 'Create Post',
     href: '#',
   },
   {
@@ -50,7 +50,7 @@ export const Header = () => {
           <div className="h-18 lg:h-20 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <Logo />
-              <div className="font-extrabold text-2xl">sphereal.ai</div>
+              <div className="font-extrabold text-2xl">Aurafarmer.ai</div>
             </div>
             <div className="h-full hidden lg:flex">
               <nav className="h-full">
