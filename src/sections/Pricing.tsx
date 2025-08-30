@@ -33,7 +33,7 @@ export const pricingTiers: {
   {
     title: 'Premium',
     description: 'Advanced AI capabilities for enhanced productivity',
-    price: 99,
+    price: 799,
     buttonText: 'Upgrade to Premium',
     buttonVariant: 'secondary',
     features: [
@@ -48,7 +48,7 @@ export const pricingTiers: {
   {
     title: 'Enterprise',
     description: 'Custom AI chatbot, advanced analytics, dedicated account',
-    price: null,
+    price: 1999,
     buttonText: 'Contact Us',
     buttonVariant: 'primary',
     features: [
@@ -95,7 +95,7 @@ export const Pricing = () => {
                   <div className="mt-8">
                     {typeof tier.price === 'number' && (
                       <span className="text-2xl font-semibold text-gray-200 align-top">
-                        $
+                        ₹
                       </span>
                     )}
                     <span className="text-7xl font-semibold text-gray-200">

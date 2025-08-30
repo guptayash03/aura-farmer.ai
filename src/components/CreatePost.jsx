@@ -6,8 +6,8 @@ const CreatePost = () => {
   return (
     <div className="relative flex flex-col items-center min-h-screen text-white">
       <Header />
-      <div className="flex flex-col md:flex-row w-[90%] lg:w-[70%] h-[600px] lg:h-[600px] rounded-lg bg-white">
-        <div className="flex-[0.6] bg-gradient-to-br from-emerald-400 to-emerald-600 ">
+      <div className="flex flex-col md:flex-row w-[90%] lg:w-[70%] h-[600px] lg:h-[600px] rounded-lg">
+        <div className="flex-[0.6]  ">
           <div className="flex flex-row gap-2 font-rubik">
             <h5 className="p-1">Aurafarmer.ai</h5>
           </div>

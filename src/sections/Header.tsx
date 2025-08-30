@@ -31,12 +31,12 @@ export const loginItems: {
   {
     buttonVariant: 'primary',
     name: 'Create Post',
-    href: '#',
+    href: '/create',
   },
   {
     buttonVariant: 'primary',
     name: 'Get Started',
-    href: '#sign-up',
+    href: '/create',
   },
 ];
 

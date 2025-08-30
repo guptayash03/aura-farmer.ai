@@ -5,7 +5,7 @@ import Footer from '@/sections/Footer';
 import Header from '@/sections/Header';
 import Hero from '@/sections/Hero';
 import Pricing from '@/sections/Pricing';
-import Testimonials from '@/sections/Testimonials';
+// import Testimonials from '@/sections/Testimonials';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <Companies />
       <Pricing />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CallToAction />
       <Footer />
     </>

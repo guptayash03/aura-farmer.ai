@@ -14,7 +14,7 @@ const spaceGroteskFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Aurafarmer.ai',
+  title: 'Aurafarmer.ai : AI Co-Creator for Social Media',
   description: ' AI Co-Creator for Social Media ie., Instagram, Linkedin, Facebook, Twitter(X), Reddit etc',
 };
 

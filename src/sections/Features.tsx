@@ -1,13 +1,13 @@
 'use client';
 
-import slackLogo from '../assets/images/slack-logo.png';
-import dockerLogo from '../assets/images/docker-logo.png';
-import figmaLogo from '../assets/images/figma-logo.png';
-import githubLogo from '../assets/images/github-logo.png';
-import vsCodeLogo from '../assets/images/vs-code-logo.png';
-import notionLogo from '../assets/images/notion-logo.png';
-import jiraLogo from '../assets/images/jira-logo.png';
-import gcpLogo from '../assets/images/gcp-logo.png';
+import instaLogo from '../assets/images/instaLogo.png';
+import twitterLogo from '../assets/images/twitterLogo.png';
+import linkedinLogo from '../assets/images/linkedinLogo.png';
+import redditLogo from '../assets/images/redditLogo.png';
+import facebookLogo from '../assets/images/facebookLogo.png';
+// import notionLogo from '../assets/images/notion-logo.png';
+// import jiraLogo from '../assets/images/jira-logo.png';
+// import gcpLogo from '../assets/images/gcp-logo.png';
 // import { SectionBorder } from '@/components/SectionBorder';
 import { SectionContent } from '@/components/SectionContent';
 import { Button } from '@/components/Button';
@@ -28,43 +28,43 @@ export const features = [
 
 export const logos = [
   {
-    src: slackLogo,
-    alt: 'slack logo',
+    src: instaLogo,
+    alt: 'instagram logo',
     rotate: 0,
   },
   {
-    src: dockerLogo,
+    src: linkedinLogo,
     alt: 'docker logo',
     rotate: 45,
   },
   {
-    src: figmaLogo,
+    src: redditLogo,
     alt: 'figma logo',
     rotate: 90,
   },
   {
-    src: githubLogo,
+    src: facebookLogo,
     alt: 'github logo',
     rotate: 135,
   },
   {
-    src: vsCodeLogo,
+    src: twitterLogo,
     alt: 'vs code logo',
     rotate: 180,
   },
   {
-    src: notionLogo,
+    src: instaLogo,
     alt: 'notion logo',
     rotate: 225,
   },
   {
-    src: jiraLogo,
-    alt: 'jira logo',
+    src: linkedinLogo,
+    alt: 'linkedin logo',
     rotate: 270,
   },
   {
-    src: gcpLogo,
-    alt: 'gcp logo',
+    src: twitterLogo,
+    alt: 'twitter logo',
     rotate: 315,
   },
 ];

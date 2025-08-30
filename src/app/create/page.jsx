@@ -1,16 +1,14 @@
 import CreatePost from "@/components/CreatePost";
-import Squares from "@/backgrounds/Squares";
+import Iridescence from '@/backgrounds/Iridescence';
 
 export default function Page() {
   return (
-    <div className="flex flex-col bg-black min-h-screen text-white h-full">
-
-      <Squares
-        speed={0.5}
-        squareSize={40}
-        direction="diagonal" 
-        borderColor="#fff"
-        hoverFillColor="#222"
+    <div className="flex flex-col min-h-screen text-white h-full">
+      <Iridescence
+        color={[1, 1, 1]}
+        mouseReact={false}
+        amplitude={0.1}
+        speed={1.0}
       />
       <CreatePost />
     </div>

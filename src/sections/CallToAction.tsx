@@ -94,7 +94,7 @@ export const CallToAction = () => {
             <h2 className="text-gray-200 font-semibold text-3xl md:text-4xl lg:text-5xl max-w-3xl mx-auto text-center leading-tight">
               Join the AI Revolution with{' '}
               <span className="relative isolate">
-                <span>Sphereal</span>
+                <span>Aurafarmer.ai</span>
                 <span
                   className="absolute top-full left-0 w-full h-4 background-linear_gradient"
                   style={{

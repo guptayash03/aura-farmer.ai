@@ -51,7 +51,7 @@ export const Footer = () => {
     <footer className="border-t border-[var(--color-border)]">
       <div className="container py-8">
         <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8">
-          <div className="font-extrabold text-2xl">sphereal.ai</div>
+          <div className="font-extrabold text-2xl">Aurafarmer.ai</div>
           <nav className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             {navItems.map((item) => (
               <Link
@@ -84,7 +84,7 @@ export const Footer = () => {
           </div>
 
           <div className="flex gap-2 items-center text-gray-500">
-            <small>@anelsahovic </small>
+            <small>@DeepEngine AI Pvt. Ltd. </small>
             <small>All rights reserved</small>
           </div>
         </div>

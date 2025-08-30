@@ -38,7 +38,7 @@ export const Hero = () => {
   const translateSmallX = useTransform(springX, [0, 1], ['-100%', '100%']);
   const translateSmallY = useTransform(springY, [0, 1], ['-100%', '100%']);
   return (
-    <section ref={sectionRef}>
+    <section ref={sectionRef} >
       <div className="container">
         <SectionBorder>
           <SectionContent className="relative isolate [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
@@ -75,9 +75,9 @@ export const Hero = () => {
                 ></span>
               </span>
             </h1>
-            <p className="text-center text-lg md:text-xl mt-8 lg:max-w-3xl lg:mx-auto">
+            {/* <p className="text-center text-lg md:text-xl mt-8 lg:max-w-3xl lg:mx-auto">
               Instagram, Linkedin, Facebook, Twitter, Reddit etc
-            </p>
+            </p> */}
             <div className="flex justify-center mt-10">
               <Button variant="secondary">Start Creating Posts</Button>
             </div>
