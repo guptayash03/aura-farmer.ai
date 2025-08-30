@@ -1,5 +1,6 @@
 import CreatePost from "@/components/CreatePost";
 import Iridescence from "@/backgrounds/Iridescence";
+import Navbar from "../../components/Navbar";
 
 export default function Page() {
   return (
@@ -9,8 +10,9 @@ export default function Page() {
         color={[1, 1, 1]}
         mouseReact={false}
         amplitude={0.1}
-        speed={1.0}
+        speed={0.5}
       />
+      <Navbar />
       <CreatePost />
     </div>
   );
