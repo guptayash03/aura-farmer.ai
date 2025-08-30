@@ -3,10 +3,13 @@ import React from "react";
 import { Logo } from '@/components/Logo';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaLinkedin,FaInstagram,FaReddit,FaTwitter }  from "react-icons/fa"; 
+import { SiX } from "react-icons/si";
+
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   return (
-    <div className="w-full absolute flex flex-row justify-center ">
+    <div className=" w-full relative flex flex-row justify-center z-10">
       <div
         className={`bg-white/10 backdrop-blur-md shadow-2xl border border-white/20 flex ${
           open && "flex-col"
@@ -32,11 +35,7 @@ const Navbar = () => {
           </span>
         </div>
         <div className="font-Grotesk hidden md:flex  md:flex-row gap-5 text-slate-400 font-semibold text-lg">
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
+         
         </div>
         <AnimatePresence>
           {open && (
@@ -56,10 +55,22 @@ const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="hidden md:block">
-          <button className="group  relative overflow-hidden p-2 rounded-3xl font-Grotesk text-sm text-white bg-gradient-to-b from-teal-400 to-emerald-600 transition-all duration-300 ease-in-out font-semibold">
-            <span className="relative z-10 font-Grotesk">Get Started</span>
-            <span className="absolute inset-0 bg-emerald-600 translate-y-full transition-transform duration-300 ease-in-out rounded-3xl  group-hover:translate-y-0"></span>
+        <div className="flex flex-row gap-4 pl-14 ml-10">
+          <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white bg-gradient-to-b from-blue-400 to-blue-600 transition-all duration-300 ease-in-out font-semibold">
+            <span className="relative z-10 font-Grotesk"><FaLinkedin className="w-5 h-5"/></span>
+            <span className="absolute inset-0 bg-blue-900 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
+          </button>
+          <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white bg-gradient-to-b from-pink-600 via-red-600 to-yellow-600 transition-all duration-300 ease-in-out font-semibold">
+            <span className="relative z-10 font-Grotesk"><FaInstagram  className="w-5 h-5"/></span>
+            <span className="absolute inset-0 bg-red-700 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
+          </button>
+          <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white bg-gradient-to-b from-red-500 to-red-700 transition-all duration-300 ease-in-out font-semibold">
+            <span className="relative z-10 font-Grotesk"><FaReddit  className="w-5 h-5"/></span>
+            <span className="absolute inset-0 bg-red-900 translate-y-full transition-transform duration-300 ease-in-out rounded-3xl  group-hover:translate-y-0"></span>
+          </button>
+          <button className="group  relative overflow-hidden p-2 rounded-xl font-Grotesk text-sm text-white transition-all bg-black duration-300 ease-in-out font-semibold">
+            <span className="relative z-10 font-Grotesk"><SiX  className="w-5 h-5"/></span>
+            <span className="absolute inset-0 bg-slate-700 translate-y-full transition-transform duration-300 ease-in-out rounded-xl  group-hover:translate-y-0"></span>
           </button>
         </div>
       </div>
