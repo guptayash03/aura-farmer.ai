@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "./Navbar.css";
+import { Logo } from '@/components/Logo';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
@@ -8,11 +8,12 @@ const Navbar = () => {
   return (
     <div className="w-full absolute flex flex-row justify-center ">
       <div
-        className={`nav  flex ${
+        className={`bg-white/10 backdrop-blur-md shadow-2xl border border-white/20 flex ${
           open && "flex-col"
         } md:flex-row gap-10 items-center p-3 rounded-4xl md:rounded-full mt-5 `}
       >
-        <div className="title flex flex-row items-center gap-7 font-rubik text-white pr-2 text-xl">
+        <Logo />
+        <div className="title font-extrabold flex flex-row items-center gap-7 font-rubik text-white pr-2 text-2xl">
           AuraFarmer.ai
           <span
             className="md:hidden cursor-pointer relative w-6 h-6"
@@ -35,6 +36,7 @@ const Navbar = () => {
           <div>Hello</div>
           <div>Hello</div>
           <div>Hello</div>
+          <div>Hello</div>
         </div>
         <AnimatePresence>
           {open && (
@@ -46,6 +48,7 @@ const Navbar = () => {
               className="font-Grotesk md:hidden flex flex-col gap-5 text-slate-400 font-semibold text-lg"
             >
               
+              <div>Hello</div>
               <div>Hello</div>
               <div>Hello</div>
               <div>Hello</div>

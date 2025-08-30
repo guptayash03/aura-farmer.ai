@@ -1,5 +1,5 @@
 import CallToAction from '@/sections/CallToAction';
-import Companies from '@/sections/Companies';
+// import Companies from '@/sections/Companies';
 
 import Footer from '@/sections/Footer';
 import Header from '@/sections/Header';
@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <Companies />
+      {/* <Companies /> */}
       <Pricing />
       {/* <Testimonials /> */}
       <CallToAction />
