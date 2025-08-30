@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header";
-import "react-awesome-button/dist/styles.css";
 import { FaLinkedin } from "react-icons/fa";
 
 const CreatePost = () => {
