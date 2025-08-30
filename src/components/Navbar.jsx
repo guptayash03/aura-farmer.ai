@@ -11,13 +11,13 @@ const Navbar = () => {
   return (
     <div className=" w-full relative flex flex-row justify-center z-10">
       <div
-        className={`bg-white/10 backdrop-blur-md shadow-2xl border border-white/20 flex ${
+        className={`bg-white/10 backdrop-blur-md shadow-2xl shadow-gray-500 border border-white/20 flex ${
           open && "flex-col"
         } md:flex-row gap-5 items-center p-3 rounded-4xl md:rounded-full mt-5 `}
       >
         <Logo />
-        <div className="title font-extrabold flex flex-row items-center gap-7 font-rubik text-white pr-2 text-2xl">
-          AuraFarmer.ai
+        <div className="title font-extrabold flex flex-row items-center gap-7 font-rubik text-white pr-2 text-2xl ">
+          <span style={{textShadow: '2px 4px 4px rgba(0,0,0,0.5), 0 1px 0 #fff'}}>AuraFarmer.ai</span>
           <span
             className="md:hidden cursor-pointer relative w-6 h-6"
             onClick={() => setOpen(!open)}
