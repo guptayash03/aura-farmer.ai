@@ -30,12 +30,12 @@ export const loginItems: {
 }[] = [
   {
     buttonVariant: 'tertiary',
-    name: 'Login',
-    href: '#login',
+    name: 'Create',
+    href: '#',
   },
   {
     buttonVariant: 'primary',
-    name: 'Sign Up',
+    name: 'Get Started',
     href: '#sign-up',
   },
 ];
