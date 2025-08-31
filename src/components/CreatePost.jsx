@@ -13,20 +13,21 @@ const CreatePost = () => {
   const [image, setImage] = useState(null);
   const [genPrompt, setGenPrompt] = useState("");
   const [loading, setLoading] = useState(false);
-  const [response, setResponse] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setResponse(null);
+    setImageUrl(null);
     try {
       let imageField = "No";
+      let previewUrl = null;
       if (imageOption === "generate") {
         imageField = "Yes";
+        previewUrl = "https://restaurant-agent-bucket-course.s3.ap-south-1.amazonaws.com/image.png";
       } else if (imageOption === "upload" && image) {
-        // If you want to upload the image file, you need to upload it somewhere and get a link first.
-        // For now, we'll just use the file name as a placeholder (replace with actual upload logic if needed)
         imageField = image.name || "UploadedImage";
+        previewUrl = URL.createObjectURL(image);
       }
 
       const payload = {
@@ -35,23 +36,17 @@ const CreatePost = () => {
         image: imageField,
       };
 
-      const res = await fetch("https://n8n.larc.ai/webhook-test/76d3b8d7-4c24-46c8-a578-86e571d0acd6", {
+      await fetch("https://n8n.larc.ai/webhook-test/76d3b8d7-4c24-46c8-a578-86e571d0acd6", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       });
-      const data = await res.json().catch(() => ({
-        executionId : data.executionId
-      }));
-      setResponse(data);
-      if (data && data.executionId) {
-        // You can handle the executionId here (e.g., display, poll, etc.)
-        console.log('Execution ID:', data.executionId);
-      }
+
+      setImageUrl(previewUrl);
     } catch (err) {
-      setResponse({ error: "Failed to create post." });
+      setImageUrl(null);
     } finally {
       setLoading(false);
     }
@@ -60,8 +55,8 @@ const CreatePost = () => {
   return (
     <div className="flex flex-col items-center min-h-screen text-white z-10 py-4 mb-6">
       <div className="flex flex-col md:flex-row w-[90%] lg:w-[80%] h-[600px] lg:h-[600px] rounded-3xl bg-white/10 backdrop-blur-md shadow-2xl shadow-black border border-white/20">
-        <div className="flex-[0.6] w-full flex ">
-          <form className="p-6 w-full" onSubmit={handleSubmit}>
+        <div className="flex-[0.6] w-full flex justify-center items-center ">
+          <form className="p-6 w-full flex flex-col " onSubmit={handleSubmit}>
             <PostTitle title={title} setTitle={setTitle} />
             <div className="my-2" />
             <PostInstructions instructions={instructions} setInstructions={setInstructions} />
@@ -88,15 +83,11 @@ const CreatePost = () => {
                 <FaLinkedin className="w-5 h-5 relative z-10 group-hover:text-blue-500 transition-all duration-300" />
               </button>
             </div>
-            {response && (
-              <div className="mt-2 text-sm text-gray-800 bg-white/80 rounded p-2">
-                {response.error ? response.error : JSON.stringify(response)}
-              </div>
-            )}
+            {/* No response preview needed, only imageUrl is passed to PostPreview */}
           </form>
         </div>
 
-        <PostPreview />
+  <PostPreview imageUrl={imageUrl} />
       </div>
     </div>
   );

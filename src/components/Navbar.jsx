@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className=" w-full relative flex flex-row justify-center z-10">
       <div
-        className={`bg-white/10 backdrop-blur-md shadow-2xl shadow-gray-500 border border-white/20 flex ${
+        className={`bg-white/10 backdrop-blur-md shadow-2xl shadow-gray-600 border border-white/30 flex ${
           open && "flex-col"
         } md:flex-row gap-5 items-center p-3 rounded-4xl md:rounded-full mt-5 `}
       >

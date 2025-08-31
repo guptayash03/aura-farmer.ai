@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TiltedCard from "./TiltedCard";
 
 
-const PostPreview = () => {
+const PostPreview = ({ imageUrl }) => {
+  // Use fallback value if no imageUrl
+  const baseImageUrl = imageUrl || "https://restaurant-agent-bucket-course.s3.ap-south-1.amazonaws.com/image.png";
+  const captionText = "LinkedIn Post Preview";
+  const [cacheBuster, setCacheBuster] = useState(Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCacheBuster(Date.now());
+    }, 5000); // refresh every 5 seconds
+    return () => clearInterval(interval);
+  }, [baseImageUrl]);
+
+  // Append cache-busting param to force image refresh
+  const imageSrc = `${baseImageUrl}${baseImageUrl.includes('?') ? '&' : '?'}cb=${cacheBuster}`;
+
   return (
     <div className="flex flex-col flex-[0.4] w-full justify-center items-center gap-6">
       <TiltedCard
-        imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-        altText="Kendrick Lamar - GNX Album Cover"
-        captionText="Kendrick Lamar - GNX"
-        containerHeight="450px"
-        containerWidth="350px"
-        imageHeight="450px"
-        imageWidth="350px"
-        rotateAmplitude={10}
+        imageSrc={imageSrc}
+        altText={captionText}
+        captionText={captionText}
+        containerHeight="400px"
+        containerWidth="400x"
+        imageHeight="400px"
+        imageWidth="400px"
+        rotateAmplitude={8}
         scaleOnHover={1.05}
         showMobileWarning={false}
         showTooltip={true}
