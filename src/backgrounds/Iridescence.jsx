@@ -41,7 +41,10 @@ void main() {
   d += uTime * 0.5 * uSpeed;
   vec3 col = vec3(cos(uv * vec2(d, a)) * 0.6 + 0.4, cos(a + d) * 0.5 + 0.5);
   col = cos(col * cos(vec3(d, a, 2.5)) * 0.5 + 0.5) * uColor;
-  gl_FragColor = vec4(col, 1.0);
+  // Slightly boost glow
+  col = pow(col, vec3(0.85)); // gentle brightening
+  col *= 1.18; // slight intensity increase
+  gl_FragColor = vec4(min(col, 1.0), 1.0);
 }
 `;
 
